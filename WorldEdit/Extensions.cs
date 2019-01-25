@@ -45,7 +45,7 @@ namespace WorldEdit
             var type = item.Type;
             if (!tplayer.HasItem(type))
             {
-                player.GiveItem(type, "", tplayer.width, tplayer.height, item.StackSize, item.Prefix);
+                player.GiveItem(type, item.StackSize, item.Prefix);
             }
         }
 

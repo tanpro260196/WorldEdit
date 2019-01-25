@@ -51,7 +51,7 @@ namespace WorldEdit
                 throw new ArgumentNullException(nameof(player));
             }
 
-            var username = player.User?.Name ?? player.Name;
+            var username = player.Account?.Name ?? player.Name;
             return _sessionManager.GetOrCreate(username);
         }
 
@@ -141,7 +141,7 @@ namespace WorldEdit
                 return;
             }
 
-            var username = player.User?.Name ?? player.Name;
+            var username = player.Account?.Name ?? player.Name;
             await _sessionManager.RemoveAsync(username);
         }
     }
